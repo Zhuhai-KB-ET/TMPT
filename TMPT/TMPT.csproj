@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3316ABAA-8388-4C7B-8D90-84BE5EF82DD5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TMPT</RootNamespace>
+    <AssemblyName>TMPT</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataClass\MyMeans.cs" />
+    <Compile Include="db_PWMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_PWMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="F_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Login.Designer.cs">
+      <DependentUpon>F_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Main.Designer.cs">
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAddForm\F_Address.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAddForm\F_Address.Designer.cs">
+      <DependentUpon>F_Address.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAddForm\F_Basic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAddForm\F_Basic.Designer.cs">
+      <DependentUpon>F_Basic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAddForm\F_ClewSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoAddForm\F_ClewSet.Designer.cs">
+      <DependentUpon>F_ClewSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleClass\MyModule.cs" />
+    <Compile Include="PerForm\F_AddressList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_AddressList.Designer.cs">
+      <DependentUpon>F_AddressList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_ClearData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_ClearData.Designer.cs">
+      <DependentUpon>F_ClearData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_HaveBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_HaveBack.Designer.cs">
+      <DependentUpon>F_HaveBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_PTFileMana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_PTFileMana.Designer.cs">
+      <DependentUpon>F_PTFileMana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_TMFileMana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_TMFileMana.Designer.cs">
+      <DependentUpon>F_TMFileMana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_TMStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_TMStatistic.Designer.cs">
+      <DependentUpon>F_TMStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_TMSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_TMSearch.Designer.cs">
+      <DependentUpon>F_TMSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_User.Designer.cs">
+      <DependentUpon>F_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_UserAdd.Designer.cs">
+      <DependentUpon>F_UserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_UserPope.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_UserPope.Designer.cs">
+      <DependentUpon>F_UserPope.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerForm\F_WordPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerForm\F_WordPad.Designer.cs">
+      <DependentUpon>F_WordPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Login.resx">
+      <DependentUpon>F_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Main.resx">
+      <DependentUpon>F_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAddForm\F_Address.resx">
+      <DependentUpon>F_Address.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAddForm\F_Basic.resx">
+      <DependentUpon>F_Basic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoAddForm\F_ClewSet.resx">
+      <DependentUpon>F_ClewSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_AddressList.resx">
+      <DependentUpon>F_AddressList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_ClearData.resx">
+      <DependentUpon>F_ClearData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_HaveBack.resx">
+      <DependentUpon>F_HaveBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_PTFileMana.resx">
+      <DependentUpon>F_PTFileMana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_TMFileMana.resx">
+      <DependentUpon>F_TMFileMana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_TMStatistic.resx">
+      <DependentUpon>F_TMStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_TMSearch.resx">
+      <DependentUpon>F_TMSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_User.resx">
+      <DependentUpon>F_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_UserAdd.resx">
+      <DependentUpon>F_UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_UserPope.resx">
+      <DependentUpon>F_UserPope.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerForm\F_WordPad.resx">
+      <DependentUpon>F_WordPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="db_PWMSDataSet.xsc">
+      <DependentUpon>db_PWMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_PWMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_PWMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_PWMSDataSet.xss">
+      <DependentUpon>db_PWMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.9.2">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition SP2 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
